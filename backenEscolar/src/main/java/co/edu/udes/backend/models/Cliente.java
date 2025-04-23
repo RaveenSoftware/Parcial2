@@ -14,7 +14,7 @@ public class Cliente {
 
     private String correo;
 
-    private String telefono; // Este campo es importante
+    private String telefono;
 
     public Cliente() {
     }

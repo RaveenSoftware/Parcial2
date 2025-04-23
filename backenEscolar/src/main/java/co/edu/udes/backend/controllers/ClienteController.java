@@ -45,9 +45,11 @@ public class ClienteController {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Cliente no existe con el id :" + id));
 
+        // Cambia aquí para que coincidan con los nombres de los métodos en tu clase Cliente
         cliente.setNombre(clienteDetalles.getNombre());
-        cliente.setEmail(clienteDetalles.getEmail());
-        cliente.setNumeroTelefono(clienteDetalles.getNumeroTelefono());
+        cliente.setCorreo(clienteDetalles.getCorreo());
+        cliente.setTelefono(clienteDetalles.getTelefono());
+
         Cliente clienteActualizado = clienteRepository.save(cliente);
         return ResponseEntity.ok(clienteActualizado);
     }

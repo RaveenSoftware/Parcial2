@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
 
-    // Para buscar habitaciones con capacidad mayor o igual a la indicada
+    // aqui busco habitaciones con capacidad mayor o igual a la indicada
     List<Habitacion> findByCapacidadGreaterThanEqual(int capacidad);
 }
